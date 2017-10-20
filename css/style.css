@@ -38,15 +38,20 @@ ul {
 }
 
 .content {
-  margin-top: 100px;
+  margin-top: 20px;
   display: block;
   min-height: 200px;
   width: 100%;
-  background-color: white;
-  border: 1px solid #423f3f;
+  text-align: center;
 }
 a {
   text-decoration: none;
+}
+
+.pageTitle {
+  color: #423f3f;
+  font-size: 50px;
+  align-self: center;
 }
 
 h3 {
@@ -183,12 +188,6 @@ COLORS
 /*green header*/
 header {
   background: #f5f5f5;
-}
-
-/*logo text*/
-h1,
-h2 {
-  color: #fff;
 }
 
 /*links*/
