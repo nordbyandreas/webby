@@ -7,6 +7,7 @@
     <title>Tinc. || Webby</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/hex.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   </head>
@@ -20,10 +21,109 @@
 
 			<div class="content">
 
-        <h1 class="pageTitle">Our Work<h1>
+                <h1 class="pageTitle">Our Work</h1>
 
-      <!-- ADD PAGE CONTENT  HERE :D -->
+      <!-- ADD PAGE CONTENT  HERE :DDD -->
+                    <div id = "container">
 
+                    </div>
+
+                    <script>
+
+                        function new_hex(){
+                            var hex0 = document.createElement("div");
+                            var hex1 = document.createElement("div");
+                            var hex2 = document.createElement("div");
+
+                            var img = document.createElement("img");
+                            img.src = "./img/LEGOs.jpg";
+
+                            hex0.className = "hex0";
+                            hex1.className = "hex1";
+                            hex2.className = "hex2";
+
+                            hex2.appendChild(img);
+                            hex1.appendChild(hex2);
+                            hex0.appendChild(hex1);
+
+                            return hex0
+                        }
+
+                        function clear_container(){
+                            var container = document.getElementById("container");
+                            var children = container.children;
+                            while(children.length > 0){
+                                children[0].parentNode.removeChild(elements[0]);
+                            }
+                        }
+
+                        function fill_cont(){
+                            for (i = 0; i <20; i++){
+                                var hex0 = new_hex();
+                                var container = document.getElementById("container");
+                                container.appendChild(hex0);
+                            }
+                        }
+
+                        function remove_elements_by_class(class_name){
+                            var elements = document.getElementsByClassName(class_name);
+                            while(elements.length > 0){
+                                elements[0].parentNode.removeChild(elements[0]);
+                            }
+                        }
+                        function add_linebreak(index){
+                            var container = document.getElementById("container");
+                            var linebreak = document.createElement("br");
+                            linebreak.className = "breakline";
+                            container.insertBefore(linebreak, container.children[index]);
+                        }
+
+                        function get_hex_in_width() {
+                            var container = document.getElementById("container");
+                            var c_width = container.offsetWidth;
+
+                            var hex = document.getElementsByClassName("hex0");
+                            var h_width = hex.item(1).offsetWidth;
+
+                            var hex_in_width = Math.floor(c_width/h_width);
+
+                            return hex_in_width
+                        }
+
+                        function resize() {
+                            remove_elements_by_class("breakline");
+
+                            console.log("RESIZE");
+                            var hex_in_width = get_hex_in_width();
+
+                            if (window.innerWidth < 570){
+                            //if (hex_in_width < 3){
+                                return //TODO: TRANSFORM INTO SQUARES
+                            }
+
+                            var container = document.getElementById("container");
+                            var i = hex_in_width -1;
+
+                            while (i < container.childElementCount) {
+                                add_linebreak(i);
+                                i += hex_in_width + 1;
+                                add_linebreak(i);
+                                i += hex_in_width;
+                            }
+                        }
+
+                        var doit;
+                        var onresize = function(e) {
+                            clearTimeout(doit);
+                            doit = setTimeout(resize, 50);
+                        }
+
+                        window.addEventListener("resize", onresize);
+
+                        fill_cont();
+                        resize();
+
+                    </script>
 
 			</div>
 

@@ -1,0 +1,144 @@
+
+#container{
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 7em;
+    max-width: 1100px;
+}
+
+.hex0{
+    /*background-color: lightblue;*/
+    margin-top: -4.7em;
+    margin-left: 0em;
+    display: inline-block;
+}
+.hex0, .hex0 div {
+    overflow: hidden;
+    width: 12em;
+    height: 15em;
+}
+.hex0 div {
+    width: 100%;
+    height: 100%;
+}
+.hex0 {
+    transform: rotate(-120deg);
+}
+.hex1 {
+
+    /*background-color: lightcoral;*/
+    transform: rotate(60deg);
+}
+.hex2 {
+
+    /*background-color: lightseagreen;*/
+    transform: rotate(60deg);
+}
+.hex2 img {
+    width: auto;
+    height: 250px;
+}
+
+.hex2 img:hover {
+    opacity: 0.5;
+}
+
+
+/********************
+TINY RESOLUTION
+TREE IMAGES IN WIDTH
+********************/
+@media screen and (max-width: 640px) {
+
+    /********************
+    GENERAL
+    ********************/
+    .wrapper {
+        width: 100%;
+    }
+}
+
+/********************
+TINY RESOLUTION
+TWO IMAGES IN WIDTH
+********************/
+@media screen and (max-width: 570px) {
+    .hex0{
+        /*background-color: lightblue;*/
+        margin-top: 0em;
+        margin-left: 0em;
+        display: inline-block;
+    }
+    .hex0, .hex0 div {
+        overflow: hidden;
+        width: 49vw;
+        height: 49vw;
+    }
+    .hex0 div {
+        width: 100%;
+        height: 100%;
+    }
+    .hex0 {
+        transform: rotate(0deg);
+    }
+    .hex1 {
+
+        /*background-color: lightcoral;*/
+        transform: rotate(0deg);
+    }
+    .hex2 {
+
+        /*background-color: lightseagreen;*/
+        transform: rotate(0deg);
+    }
+    .hex2 img {
+        width: auto;
+        height: 100%;;
+    }
+
+    .hex2 img:hover {
+        opacity: 0.5;
+    }
+}
+
+/********************
+TINY RESOLUTION
+ONE IMAGE IN WIDTH
+********************/
+@media screen and (max-width: 400px) {
+    .hex0{
+        /*background-color: lightblue;*/
+        margin-top: 0em;
+        margin-left: 0em;
+        display: inline-block;
+    }
+    .hex0, .hex0 div {
+        overflow: hidden;
+        width: 99vw;
+        height: 99vw;
+    }
+    .hex0 div {
+        width: 100%;
+        height: 100%;
+    }
+    .hex0 {
+        transform: rotate(0deg);
+    }
+    .hex1 {
+
+        /*background-color: lightcoral;*/
+        transform: rotate(0deg);
+    }
+    .hex2 {
+
+        /*background-color: lightseagreen;*/
+        transform: rotate(0deg);
+    }
+    .hex2 img {
+        height: 100%;
+    }
+
+    .hex2 img:hover {
+        opacity: 0.5;
+    }
+}
