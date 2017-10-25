@@ -35,28 +35,47 @@
                             var hex1 = document.getElementsByClassName("hex1");
                             var hex2 = document.getElementsByClassName("hex2");
 
-                            for(i=0; i<hex0.length; i++) {
-                                hex0[i].style.marginTop = "-7.4em";
+                            for (i= 0; i < hex0.length; i+= 1){
+                                hex0[i].className = "hex0_large";
                             }
+                            for (i= 0; i < hex1.length; i+=1){
+                                hex1[i].className = "hex1_large";
+                            }
+                            for (i= 0; i < hex2.length; i+=1){
+                                hex2[i].className = "hex2_large";
+                            }
+                        }
 
-                            hex0.style.marginTop = "-7.4em";
-                            hex0.style.marginLeft = "0em";
-                            hex0.style.display = "inline-block";
+                        function reset_hex_style(){
+                            var hex0 = document.getElementsByClassName("hex0_small");
+                            var hex1 = document.getElementsByClassName("hex1_small");
+                            var hex2 = document.getElementsByClassName("hex2_small");
 
-                            hex0.style.width = "12em";
-                            hex0.style.height = "15em";
+                            for (i= 0; i < hex0.length; i+= 1){
+                                hex0[i].className = "hex0_large";
+                            }
+                            for (i= 0; i < hex1.length; i+=1){
+                                hex1[i].className = "hex1_large";
+                            }
+                            for (i= 0; i < hex2.length; i+=1){
+                                hex2[i].className = "hex2_large";
+                            }
+                        }
 
-                            hex0.style.overflow = "hidden";
-                            hex1.style.overflow = "hidden";
-                            hex2.style.overflow = "hidden";
+                        function set_square_style(){
+                            var hex0 = document.getElementsByClassName("hex0_large");
+                            var hex1 = document.getElementsByClassName("hex1_large");
+                            var hex2 = document.getElementsByClassName("hex2_large");
 
-                            hex0.style.transform = "rotate(-120deg)";
-                            hex1.style.transform = "rotate(60deg)";
-                            hex2.style.transform = "rotate(60deg)";
-
-                            var img = document.getElementsByClassName("galleryImage");
-                            img.style.width = "auto";
-                            img.style.height = "100%";
+                            for (i= 0; i < hex0.length; i+= 1){
+                                hex0[i].className = "hex0_small";
+                            }
+                            for (i= 0; i < hex1.length; i+=1){
+                                hex1[i].className = "hex1_small";
+                            }
+                            for (i= 0; i < hex2.length; i+=1){
+                                hex2[i].className = "hex2_small";
+                            }
                         }
 
                         function new_hex(){
@@ -65,12 +84,12 @@
                             var hex2 = document.createElement("div");
 
                             var img = document.createElement("img");
-                            img.className = "galleryImage";
+                            img.className = "galleryImage_large";
                             img.src = "./img/LEGOs.jpg";
 
-                            hex0.className = "hex0";
-                            hex1.className = "hex1";
-                            hex2.className = "hex2";
+                            hex0.className = "hex0_large";
+                            hex1.className = "hex1_large";
+                            hex2.className = "hex2_large";
 
                             hex2.appendChild(img);
                             hex1.appendChild(hex2);
@@ -112,8 +131,8 @@
                             var container = document.getElementById("container");
                             var c_width = container.offsetWidth;
 
-                            var hex = document.getElementsByClassName("hex0");
-                            var h_width = hex.item(1).offsetWidth;
+                            //var hex = document.getElementsByClassName("hex0_large");
+                            var h_width = 192; //hex.item(1).offsetWidth;
 
                             var hex_in_width = Math.floor(c_width/h_width);
 
@@ -126,9 +145,14 @@
                             console.log("RESIZE");
                             var hex_in_width = get_hex_in_width();
 
-                            if (window.innerWidth < 570){
-                            //if (hex_in_width < 3){
-                                return //TODO: TRANSFORM INTO SQUARES
+                            if (hex_in_width < 3){
+                                console.log("SET SQUARE");
+                                console.log(hex_in_width);
+                                set_square_style();
+                            }
+                            else{
+                                console.log("RESET");
+                                reset_hex_style();
                             }
 
                             var container = document.getElementById("container");
@@ -151,7 +175,7 @@
                         window.addEventListener("resize", onresize);
 
                         fill_cont();
-                        set_hex_style();
+                        //set_hex_style();
 
                         resize();
 

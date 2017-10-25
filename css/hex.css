@@ -6,21 +6,37 @@
     max-width: 1100px;
 }
 
-.hex0{
+.hex0_large{
+    margin-top: -4.5em;
+    margin-left: 0.5em;
+    display: inline-block;
 
+    width: 12em;
+    height: 15em;
+
+    overflow: hidden;
+    transform: rotate(-120deg);
 }
 
-.hex1 {
-
+.hex1_large {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: rotate(60deg);
 }
 
-.hex2 {
-
+.hex2_large {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: rotate(-120deg);
 }
 
-.galleryImage {
-
+.galleryImage_large {
+    width: auto;
+    height: 100%;
 }
+
 /********************
 TINY RESOLUTION
 TREE IMAGES IN WIDTH
@@ -35,84 +51,31 @@ TREE IMAGES IN WIDTH
     }
 }
 
-/********************
-TINY RESOLUTION
-TWO IMAGES IN WIDTH
-********************/
-@media screen and (max-width: 570px) {
-    .hex0{
-        /*background-color: lightblue;*/
-        margin-top: 0em;
-        margin-left: 0em;
-        display: inline-block;
-        transform: rotate(0deg);
-    }
-    .hex0, .hex0 div {
-        overflow: hidden;
-        width: 49vw;
-        height: 49vw;
-    }
-    .hex0 div {
-        width: 100%;
-        height: 100%;
-    }
-    .hex1 {
-        /*background-color: lightcoral;*/
-        transform: rotate(0deg);
-    }
-    .hex2 {
-
-        /*background-color: lightseagreen;*/
-        transform: rotate(0deg);
-    }
-    .hex2 img {
-        width: auto;
-        height: 100%;;
-    }
-
-    .hex2 img:hover {
-        opacity: 0.5;
-    }
+.hex0_small{
+    /*background-color: lightblue;*/
+    margin-top: 0em;
+    margin-left: 0em;
+    display: inline-block;
+    transform: rotate(0deg);
+    width: 49vw;
+    height: 49vw;
+}
+.hex1_small {
+    /*background-color: lightcoral;*/
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg);
+}
+.hex2_small {
+    /*background-color: lightseagreen;*/
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg);
+}
+.galleryImage_small {
+    width: auto;
+    height: 100%;;
 }
 
-/********************
-TINY RESOLUTION
-ONE IMAGE IN WIDTH
-********************/
-@media screen and (max-width: 400px) {
-    .hex0{
-        /*background-color: lightblue;*/
-        margin-top: 0em;
-        margin-left: 0em;
-        display: inline-block;
-    }
-    .hex0, .hex0 div {
-        overflow: hidden;
-        width: 99vw;
-        height: 99vw;
-    }
-    .hex0 div {
-        width: 100%;
-        height: 100%;
-    }
-    .hex0 {
-        transform: rotate(0deg);
-    }
-    .hex1 {
-
-        /*background-color: lightcoral;*/
-        transform: rotate(0deg);
-    }
-    .hex2 {
-
-        /*background-color: lightseagreen;*/
-        transform: rotate(0deg);
-    }
-    .hex2 img {
-        height: 100%;
-    }
-
-    .hex2 img:hover {
-        opacity: 0.5;
-    }
-}
