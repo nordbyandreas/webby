@@ -58,6 +58,11 @@ h3 {
   margin: 0 0 1em 0;
 }
 
+.spacer {
+  display: block;
+  height: 120px;
+}
+
 /********************
 HEADER / NAVBAR
 ********************/
@@ -159,6 +164,34 @@ FOOTER
 PAGE: HOME
 ********************/
 
+#blogSection {
+  width: 100%;
+  position: relative;
+}
+
+.blogList {
+  width: 100%;
+  position: relative;
+}
+
+.blogItem {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  height: 200px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blogTitle {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  color: white;
+  bottom: 0;
+}
+
 /********************
 PAGE: WORK
 ********************/
@@ -178,6 +211,19 @@ PAGE:  FAQ
 /********************
   PAGE: CONTACT
 ********************/
+
+.cp {
+  display: block;
+  margin-top: 50px;
+}
+
+#map {
+  border: 1px solid black;
+  display: block;
+  margin: 20px auto;
+  width: 600px;
+  height: 600px;
+}
 
 /********************
 COLORS

@@ -20,9 +20,33 @@
 
 			<div class="content">
 
-        <h1 class="pageTitle">Get in touch!<h1>
+        <h1 class="pageTitle">Get in touch!</h1>
 
-      <!-- ADD PAGE CONTENT  HERE :D -->
+
+      <b class="cp">If you ever want to talk to us, please do ! We want to talk to you too. Contact us on social media:</b>
+
+      <div class="social-icons">
+        <a href="http://www.facebook.com/">
+        <img src="img/social-icons/facebook.png" alt="Facebook logo" class="social-icon"/>
+        </a>
+        <a href="http://www.instagram.com">
+        <img src="img/social-icons/instagram.png" alt="instagramlogo" class="social-icon"/>
+        </a>
+        <a href="http://www.twitter.com">
+        <img src="img/social-icons/twitter.png" alt="twitter logo" class="social-icon"/>
+        </a>
+        <a href="http://www.snapchat.com">
+        <img src="img/social-icons/snapchat.png" alt="snapchat logo" class="social-icon"/>
+        </a>
+        <a href="http://www.youtube.com">
+        <img src="img/social-icons/youtube.png" alt="youtube logo" class="social-icon"/>
+        </a>
+      </div>
+
+      <b class="cp">Or find us at SomeStreet 21, 7040, Trondheim</b>
+
+      <div id="map"></div>
+
 
 
 			</div>
@@ -32,9 +56,25 @@
 
 
       <!-- Footer included with the include.js-script -->
+    <div class="spacer"></div>
 		<footer id="footer">
 		</footer>
 		<script type="text/javascript" src="js/include.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChENB_L65HFnEJtXgf0A5R0hx2PvWA9aU&callback=initMap">
+    </script>
+    <script>
+    function initMap() {
+  var location = { lat: 63.419, lng: 10.402 };
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: location
+  });
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+}
+</script>
   </body>
 
 </html>
