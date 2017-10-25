@@ -30,12 +30,42 @@
 
                     <script>
 
+                        function set_hex_style(){
+                            var hex0 = document.getElementsByClassName("hex0");
+                            var hex1 = document.getElementsByClassName("hex1");
+                            var hex2 = document.getElementsByClassName("hex2");
+
+                            for(i=0; i<hex0.length; i++) {
+                                hex0[i].style.marginTop = "-7.4em";
+                            }
+
+                            hex0.style.marginTop = "-7.4em";
+                            hex0.style.marginLeft = "0em";
+                            hex0.style.display = "inline-block";
+
+                            hex0.style.width = "12em";
+                            hex0.style.height = "15em";
+
+                            hex0.style.overflow = "hidden";
+                            hex1.style.overflow = "hidden";
+                            hex2.style.overflow = "hidden";
+
+                            hex0.style.transform = "rotate(-120deg)";
+                            hex1.style.transform = "rotate(60deg)";
+                            hex2.style.transform = "rotate(60deg)";
+
+                            var img = document.getElementsByClassName("galleryImage");
+                            img.style.width = "auto";
+                            img.style.height = "100%";
+                        }
+
                         function new_hex(){
                             var hex0 = document.createElement("div");
                             var hex1 = document.createElement("div");
                             var hex2 = document.createElement("div");
 
                             var img = document.createElement("img");
+                            img.className = "galleryImage";
                             img.src = "./img/LEGOs.jpg";
 
                             hex0.className = "hex0";
@@ -121,6 +151,8 @@
                         window.addEventListener("resize", onresize);
 
                         fill_cont();
+                        set_hex_style();
+
                         resize();
 
                     </script>

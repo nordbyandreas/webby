@@ -7,43 +7,20 @@
 }
 
 .hex0{
-    /*background-color: lightblue;*/
-    margin-top: -4.7em;
-    margin-left: 0em;
-    display: inline-block;
+
 }
-.hex0, .hex0 div {
-    overflow: hidden;
-    width: 12em;
-    height: 15em;
-}
-.hex0 div {
-    width: 100%;
-    height: 100%;
-}
-.hex0 {
-    transform: rotate(-120deg);
-}
+
 .hex1 {
 
-    /*background-color: lightcoral;*/
-    transform: rotate(60deg);
 }
+
 .hex2 {
 
-    /*background-color: lightseagreen;*/
-    transform: rotate(60deg);
-}
-.hex2 img {
-    width: auto;
-    height: 250px;
 }
 
-.hex2 img:hover {
-    opacity: 0.5;
+.galleryImage {
+
 }
-
-
 /********************
 TINY RESOLUTION
 TREE IMAGES IN WIDTH
@@ -68,6 +45,7 @@ TWO IMAGES IN WIDTH
         margin-top: 0em;
         margin-left: 0em;
         display: inline-block;
+        transform: rotate(0deg);
     }
     .hex0, .hex0 div {
         overflow: hidden;
@@ -78,11 +56,7 @@ TWO IMAGES IN WIDTH
         width: 100%;
         height: 100%;
     }
-    .hex0 {
-        transform: rotate(0deg);
-    }
     .hex1 {
-
         /*background-color: lightcoral;*/
         transform: rotate(0deg);
     }
