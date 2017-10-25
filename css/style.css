@@ -200,6 +200,45 @@ PAGE: WORK
 PAGE: ABOUT
 ********************/
 
+#about_employeeOverview{
+  border-bottom: 1px solid #423f3f;
+  max-width: 800px;
+  padding-bottom: 30px;
+}
+
+.about_empPic{
+  height: 140px;
+  width: 140px;
+}
+
+#about_empDetailsWrapper{
+  width: 80%;
+  margin: 30px auto;
+}
+
+.about_empDet{
+  border-bottom: 1px dashed #423f3f;
+  max-width: 800px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.about_empDet img{
+  float: left;
+  height: 100px;
+  width: 100px;
+  padding: 5px 15px;
+  display: inline-block;
+}
+.about_empDet h2{
+  font-size: 1em;
+}
+.about_empText{
+  font-size: 0.8em;
+  color: #333;
+}
+
+
 /********************
 PAGE: PRICES
 ********************/
