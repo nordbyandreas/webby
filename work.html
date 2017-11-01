@@ -13,7 +13,7 @@
   </head>
 
   <body>
-		<div class="wrapper">
+		<div id="wrapper">
 
   <!-- header included with the include.js-script -->
 		    <header id="header">
@@ -30,35 +30,21 @@
 
                     <script>
 
+                        var foundTreshold = false;
+                        var treshold = 0;
+
                         function set_hex_style(){
-                            var hex0 = document.getElementsByClassName("hex0");
-                            var hex1 = document.getElementsByClassName("hex1");
-                            var hex2 = document.getElementsByClassName("hex2");
+                            var container = document.getElementById("container");
+                            for (i = 0; i < container.length; i++){
 
-                            for (i= 0; i < hex0.length; i+= 1){
-                                hex0[i].className = "hex0_large";
-                            }
-                            for (i= 0; i < hex1.length; i+=1){
-                                hex1[i].className = "hex1_large";
-                            }
-                            for (i= 0; i < hex2.length; i+=1){
-                                hex2[i].className = "hex2_large";
-                            }
-                        }
+                                var hex0 = container.children[i];
+                                var hex1 = hex0.firstChild;
+                                var hex2 = hex1.firstChild;
 
-                        function reset_hex_style(){
-                            var hex0 = document.getElementsByClassName("hex0_small");
-                            var hex1 = document.getElementsByClassName("hex1_small");
-                            var hex2 = document.getElementsByClassName("hex2_small");
+                                hex0.className = "hex0_large";
+                                hex2.className = "hex1_large";
+                                hex2.className = "hex1_large";
 
-                            for (i= 0; i < hex0.length; i+= 1){
-                                hex0[i].className = "hex0_large";
-                            }
-                            for (i= 0; i < hex1.length; i+=1){
-                                hex1[i].className = "hex1_large";
-                            }
-                            for (i= 0; i < hex2.length; i+=1){
-                                hex2[i].className = "hex2_large";
                             }
                         }
 
@@ -67,29 +53,29 @@
                             var hex1 = document.getElementsByClassName("hex1_large");
                             var hex2 = document.getElementsByClassName("hex2_large");
 
-                            for (i= 0; i < hex0.length; i+= 1){
+                            for (i= 0; i < hex0.length; i++){
                                 hex0[i].className = "hex0_small";
                             }
-                            for (i= 0; i < hex1.length; i+=1){
+                            for (i= 0; i < hex1.length; i++){
                                 hex1[i].className = "hex1_small";
                             }
-                            for (i= 0; i < hex2.length; i+=1){
+                            for (i= 0; i < hex2.length; i++){
                                 hex2[i].className = "hex2_small";
                             }
                         }
 
-                        function new_hex(){
+                        function new_hex(className){
                             var hex0 = document.createElement("div");
                             var hex1 = document.createElement("div");
                             var hex2 = document.createElement("div");
 
                             var img = document.createElement("img");
-                            img.className = "galleryImage_large";
+                            img.className = "galleryImage_" + className;
                             img.src = "./img/LEGOs.jpg";
 
-                            hex0.className = "hex0_large";
-                            hex1.className = "hex1_large";
-                            hex2.className = "hex2_large";
+                            hex0.className = "hex0_" + className;
+                            hex1.className = "hex1_" + className;
+                            hex2.className = "hex2_" + className;
 
                             hex2.appendChild(img);
                             hex1.appendChild(hex2);
@@ -102,13 +88,13 @@
                             var container = document.getElementById("container");
                             var children = container.children;
                             while(children.length > 0){
-                                children[0].parentNode.removeChild(elements[0]);
+                                children[0].parentNode.removeChild(children[0]);
                             }
                         }
 
-                        function fill_cont(){
+                        function fill_cont(className){
                             for (i = 0; i <20; i++){
-                                var hex0 = new_hex();
+                                var hex0 = new_hex(className);
                                 var container = document.getElementById("container");
                                 container.appendChild(hex0);
                             }
@@ -129,13 +115,13 @@
 
                         function get_hex_in_width() {
                             var container = document.getElementById("container");
+                            var font_size = window.getComputedStyle(container).getPropertyValue('font-size');
+
                             var c_width = container.offsetWidth;
-
-                            //var hex = document.getElementsByClassName("hex0_large");
-                            var h_width = 192; //hex.item(1).offsetWidth;
-
+                            var h_width = (12+0.5)*parseInt(font_size);
                             var hex_in_width = Math.floor(c_width/h_width);
 
+                            console.log(hex_in_width)
                             return hex_in_width
                         }
 
@@ -146,13 +132,19 @@
                             var hex_in_width = get_hex_in_width();
 
                             if (hex_in_width < 3){
-                                console.log("SET SQUARE");
-                                console.log(hex_in_width);
-                                set_square_style();
+
+                                var wrapper = document.getElementById("wrapper");
+                                wrapper.style.width = "100%";
+                                clear_container();
+                                fill_cont("small");
+                                return;
                             }
                             else{
-                                console.log("RESET");
-                                reset_hex_style();
+                                var wrapper = document.getElementById("wrapper");
+                                wrapper.style.width = "90%";
+                                clear_container();
+                                fill_cont("large");
+
                             }
 
                             var container = document.getElementById("container");
@@ -174,9 +166,7 @@
 
                         window.addEventListener("resize", onresize);
 
-                        fill_cont();
-                        //set_hex_style();
-
+                        fill_cont("large");
                         resize();
 
                     </script>

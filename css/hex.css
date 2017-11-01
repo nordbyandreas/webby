@@ -37,19 +37,6 @@
     height: 100%;
 }
 
-/********************
-TINY RESOLUTION
-TREE IMAGES IN WIDTH
-********************/
-@media screen and (max-width: 640px) {
-
-    /********************
-    GENERAL
-    ********************/
-    .wrapper {
-        width: 100%;
-    }
-}
 
 .hex0_small{
     /*background-color: lightblue;*/
