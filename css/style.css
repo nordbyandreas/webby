@@ -30,7 +30,6 @@ ul {
 }
 
 .wrapper {
-  max-width: 940px;
   min-height: 100%;
   position: relative;
   margin: 0 auto;
@@ -127,7 +126,6 @@ FOOTER
 
 .footer-content {
   border-top: 1px solid #423f3f;
-  max-width: 800px;
   position: relative;
   margin: 0 auto;
 }

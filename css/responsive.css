@@ -30,16 +30,6 @@ TABLET
 
 ********************/
 @media screen and (max-width: 898px) {
-  /********************
-  GENERAL
-  ********************/
-  #wrapper {
-    width: 90%;
-  }
-
-  /********************
-  HEADER / NAVBAR
-  ********************/
 
   #header {
     display: block;

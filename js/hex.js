@@ -125,8 +125,20 @@ function add_linebreak(index){
     container.insertBefore(linebreak, container.children[index]);
 }
 
-function resize() {
 
+function addParagraphs(hInWidth){
+    var container = document.getElementById("container");
+    var i = hInWidth -1;
+
+    while (i < container.childElementCount) {
+        add_linebreak(i);
+        i += hInWidth + 1;
+        add_linebreak(i);
+        i += hInWidth;
+    }
+}
+
+function resize() {
     console.log("RESIZE");
     var scale = scaleUpDown();
 
@@ -151,16 +163,7 @@ function resize() {
     else{
         remove_elements_by_class("breakline");
     }
-
-    var container = document.getElementById("container");
-    var i = hInWidth -1;
-
-    while (i < container.childElementCount) {
-        add_linebreak(i);
-        i += hInWidth + 1;
-        add_linebreak(i);
-        i += hInWidth;
-    }
+    addParagraphs(hInWidth);
 }
 
 var doit;
@@ -171,5 +174,12 @@ var onresize = function(e) {
 
 window.addEventListener("resize", onresize);
 
-fill_cont("large");
-resize();
+
+
+if (3 <= hInWidth){
+    fill_cont("large");
+    addParagraphs(hInWidth);
+}
+else{
+    fill_cont("small");
+}
