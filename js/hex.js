@@ -17,6 +17,7 @@ function screenIsWide(hWidth){
     return true;
 }
 
+
 function getHexInWidth(hWidth){
     var container = document.getElementById("container");
     var cWidth = container.offsetWidth;
