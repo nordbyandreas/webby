@@ -45,6 +45,7 @@ function scaleUpDown() {
     else return 0
 }
 
+
 function setHexStyle(){
     var container = document.getElementById("container");
     for (i = 0; i < container.length; i++){
@@ -59,6 +60,7 @@ function setHexStyle(){
 
     }
 }
+
 
 function set_square_style(){
     var hex0 = document.getElementsByClassName("hex0_large");
@@ -75,6 +77,7 @@ function set_square_style(){
         hex2[i].className = "hex2_small";
     }
 }
+
 
 function new_hex(className){
     var hex0 = document.createElement("div");
@@ -96,6 +99,7 @@ function new_hex(className){
     return hex0
 }
 
+
 function clear_container(){
     var container = document.getElementById("container");
     var children = container.children;
@@ -103,6 +107,7 @@ function clear_container(){
         children[0].parentNode.removeChild(children[0]);
     }
 }
+
 
 function fill_cont(className){
     for (i = 0; i <20; i++){
@@ -112,12 +117,15 @@ function fill_cont(className){
     }
 }
 
+
 function remove_elements_by_class(class_name){
     var elements = document.getElementsByClassName(class_name);
     while(elements.length > 0){
         elements[0].parentNode.removeChild(elements[0]);
     }
 }
+
+
 function add_linebreak(index){
     var container = document.getElementById("container");
     var linebreak = document.createElement("br");
@@ -137,6 +145,7 @@ function addParagraphs(hInWidth){
         i += hInWidth;
     }
 }
+
 
 function resize() {
     console.log("RESIZE");
@@ -166,20 +175,23 @@ function resize() {
     addParagraphs(hInWidth);
 }
 
+
 var doit;
 var onresize = function(e) {
     clearTimeout(doit);
     doit = setTimeout(resize, 5);
 }
 
-window.addEventListener("resize", onresize);
 
+window.addEventListener("resize", onresize);
 
 
 if (3 <= hInWidth){
     fill_cont("large");
     addParagraphs(hInWidth);
 }
+
+
 else{
     fill_cont("small");
 }
