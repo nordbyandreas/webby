@@ -29,10 +29,6 @@ var hWidth = getHexWidth();
 var hInWidth = getHexInWidth(hWidth);
 var screenIsWide = screenIsWide(hWidth);
 
-var wrapper = document.getElementById("wrapper");
-wrapper.style.width = "100%";
-
-
 function scaleUpDown() {
     var container = document.getElementById("container");
     var cWidth = container.offsetWidth;

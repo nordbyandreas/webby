@@ -118,7 +118,56 @@ TABLET
     .blogItem {
         width: 48%;
     }
+
+    /********************
+        CASE ARROWS
+    ********************/
+
+    #nextButton{
+        position: absolute;
+
+        height:100%;
+        width: 50%;
+        top: 0;
+
+        right: 0;
+        background-color: #bbbbbb;
+        opacity: 0;
+    }
+
+    #prevButton{
+        position: absolute;
+
+        height:100%;
+        width: 50%;
+        top: 0;
+
+
+        left: 0;
+        background-color: #bbbbbb;
+        opacity: 0;
+
+    }
+
+    #nextButton img{
+        display: none;
+    }
+
+    #prevButton img{
+        display: none;
+    }
+
+    #nextButton:hover{
+        opacity: 0.5;
+    }
+
+    #prevButton:hover{
+        opacity: 0.5;
+    }
 }
+
+
+
 
 /********************
 MOBILE SCREEN

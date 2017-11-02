@@ -20,12 +20,12 @@
 
     <div id="content">
 
-        <h1 class="pageTitle">Case</h1>
-
-        <div id="textWrapper">
 
         <div id="container">
             <div class="case" >
+
+                <h1 class="pageTitle">Case 1</h1>
+
                 <p>
                     A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring whi
                     ch I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was
@@ -86,6 +86,8 @@
                 </p>
             </div>
             <div class="case" >
+                <h1 class="pageTitle">Case 2</h1>
+
                 <p>
                     Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
                     the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
@@ -102,6 +104,8 @@
                 </p>
             </div>
             <div class="case" >
+                <h1 class="pageTitle">Case 3</h1>
+
                 <p>
                     One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed in
                     to a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could se
@@ -118,92 +122,9 @@
             </div>
         </div>
 
-        </div>
 
 
-
-        <script>
-
-            var index = 0;
-
-            function prev() {
-
-                console.log("prev");
-                console.log(index);
-
-                if (index == 0) {
-                    return;
-                }
-                var container = document.getElementById("container");
-
-                var oldCase = container.children[index];
-                index -= 1;
-                var newCase = container.children[index];
-                newCase.style.display = "block";
-                oldCase.style.display = "none";
-            }
-            function next() {
-
-                console.log("next");
-                console.log(index);
-                if (index == 2) {
-                    return;
-                }
-                var container = document.getElementById("container");
-
-                var oldCase = container.children[index];
-                index += 1;
-                var newCase = container.children[index];
-                newCase.style.display = "block";
-                oldCase.style.display = "none";
-            }
-
-            var nextButton = document.createElement("div");
-            var prevButton = document.createElement("div");
-
-            var nextArrow = document.createElement("img");
-            var prevArrow = document.createElement("img");
-
-
-            nextButton.id = "nextButton";
-            prevButton.id = "prevButton";
-
-            nextArrow.src = "img/triangleRight.png";
-            prevArrow.src = "img/triangleLeft.png";
-
-            nextArrow.style.maxWidth = "100%";
-            nextArrow.style.maxHeight = "100%";
-
-            prevArrow.style.maxWidth = "100%";
-            prevArrow.style.maxHeight = "100%";
-
-            nextButton.appendChild(nextArrow);
-            prevButton.appendChild(prevArrow);
-
-
-            nextButton.addEventListener("click", next);
-            prevButton.addEventListener("click", prev);
-
-            var textWrapper = document.getElementById("textWrapper");
-
-            textWrapper.insertBefore(nextButton, textWrapper.children[1]);
-            textWrapper.insertBefore(prevButton, nextButton);
-
-
-
-            //link to an article like this .../work.html#<number>
-            var url = window.location.href;
-            var argument = url.split("#")[1]; //if you break it: it's your own fault (no need to cast exceptions)
-
-            var index = parseInt(argument);
-
-            //We do not hide anything on default in case the user has disabled javascript in the browser
-            var container = document.getElementById("container");
-
-            for (var i = 0; i < 3; i++){
-                container.children[i].style.display = "none";
-            }
-            container.children[index].style.display = "block";
+        <script src="js/case.js">
 
         </script>
 
