@@ -131,8 +131,6 @@ TABLET
         top: 0;
 
         right: 0;
-        background-color: #bbbbbb;
-        opacity: 0;
     }
 
     #prevButton{
@@ -144,24 +142,42 @@ TABLET
 
 
         left: 0;
-        background-color: #bbbbbb;
-        opacity: 0;
-
     }
 
     #nextButton img{
-        display: none;
+        /*display: none;*/
+        position:absolute;
+        height: 50px;
+        right: 0;
     }
 
     #prevButton img{
-        display: none;
+        /*display: none;*/
+        position:absolute;
+        height: 50px;
+        left: 0;
     }
 
     #nextButton:hover{
+        background-color: #bbbbbb;
         opacity: 0.5;
     }
 
+    #nextButton:hover img{
+        content: url("../img/triangleRight.png");
+        opacity: 0.5;
+        display: none;
+    }
+
     #prevButton:hover{
+        /*background-color: #bbbbbb;*/
+        background-color: #bbbbbb;
+        opacity: 0.5;
+    }
+
+    #prevButton:hover img{
+        /*content: url("../img/triangleLeft.png");*/
+        display: none;
         opacity: 0.5;
     }
 }
@@ -206,6 +222,17 @@ MOBILE SCREEN
     .blogItem {
         width: 95%;
     }
+
+    #nextButton img{
+        /*display: none;*/
+        height: 30px;
+    }
+
+    #prevButton img{
+        /*display: none;*/
+        height: 30px;
+    }
+
 }
 
 

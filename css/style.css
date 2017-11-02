@@ -435,7 +435,7 @@ Case
 #nextButton{
     position: absolute;
 
-    height:60px;
+    height: 50px;
     max-width: 50%;
 
     top: 0;
@@ -447,7 +447,7 @@ Case
 #prevButton{
     position: absolute;
 
-    height:60px;
+    height: 50px;
     max-width: 50%;
 
     top: 0;
