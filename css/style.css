@@ -8,11 +8,6 @@
 /********************
 GENERAL
 ********************/
-
-h1{
-    text-align: center;
-}
-
 html {
     margin: 0px;
     height: 100%;
@@ -29,6 +24,10 @@ body {
     position: relative;
 }
 
+h1{
+    text-align: center
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -42,13 +41,12 @@ ul {
     padding: 0;
 }
 
-#content {
+.content {
     margin-top: 20px;
     display: block;
     min-height: 200px;
     width: 100%;
     text-align: center;
-
 }
 a {
     text-decoration: none;
@@ -422,7 +420,6 @@ nav a.selected,
 nav a:hover {
     color: #32673f;
 }
-
 
 /********************
 Case

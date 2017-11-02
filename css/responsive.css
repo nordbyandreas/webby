@@ -120,7 +120,7 @@ TABLET
     }
 
     /********************
-        CASE ARROWS
+        CASE BUTTONS
     ********************/
 
     #nextButton{
@@ -167,8 +167,6 @@ TABLET
 }
 
 
-
-
 /********************
 MOBILE SCREEN
 
@@ -209,3 +207,5 @@ MOBILE SCREEN
         width: 95%;
     }
 }
+
+
