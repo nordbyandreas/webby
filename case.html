@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Tinc. || Webby</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+<div class="wrapper">
+
+    <!-- header included with the include.js-script -->
+    <header id="header">
+    </header>
+
+    <div class="content">
+
+        <h1 class="pageTitle">Case</h1>
+
+        <button onclick="previous()">Click Me</button>
+        <button onclick="next()">Click Me</button>
+
+
+        <div id="container">
+            <div class="case">
+                <p>
+                    CASE 1
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempus vestibulum mollis. Suspendisse
+                    fermentum congue massa quis semper. Nullam vel nunc eleifend, pellentesque nunc ut, consectetur leo. Nam
+                    non libero dictum, efficitur purus id, semper erat. Aenean finibus, nisl nec consectetur vestibulum, dia
+                    m sapien viverra dolor, at sagittis mi tortor aliquam ligula. Nulla sit amet mauris mi. In hac habitasse
+                    platea dictumst. Nunc a magna vulputate elit elementum pulvinar. Vivamus in lectus faucibus, ultricies n
+                    unc non, bibendum quam. In vitae diam non eros tempor dignissim id quis magna. Donec id purus interdum,
+                    finibus felis sit amet, tincidunt risus. Pellentesque convallis lacus sit amet ipsum aliquet varius. Nam
+                    cursus tempus euismod.
+
+                    Vivamus viverra diam non ex imperdiet condimentum. In malesuada nisi a bibendum faucibus. Suspendisse ip
+                    sum nibh, ultrices vel sagittis eu, rutrum sed magna. Fusce ex elit, fermentum ac velit eu, fermentum po
+                    suere massa. Integer vel massa cursus odio facilisis aliquet nec eu ipsum. Phasellus at rutrum metus. Nu
+                    lla imperdiet dolor ultrices efficitur pellentesque. Donec malesuada ac tortor nec iaculis.
+                </p>
+            </div>
+            <div class="case">
+                <p>
+                    CASE 2
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempus vestibulum mollis. Suspendisse
+                    fermentum congue massa quis semper. Nullam vel nunc eleifend, pellentesque nunc ut, consectetur leo. Nam
+                    non libero dictum, efficitur purus id, semper erat. Aenean finibus, nisl nec consectetur vestibulum, dia
+                    m sapien viverra dolor, at sagittis mi tortor aliquam ligula. Nulla sit amet mauris mi. In hac habitasse
+                    platea dictumst. Nunc a magna vulputate elit elementum pulvinar. Vivamus in lectus faucibus, ultricies n
+                    unc non, bibendum quam. In vitae diam non eros tempor dignissim id quis magna. Donec id purus interdum,
+                    finibus felis sit amet, tincidunt risus. Pellentesque convallis lacus sit amet ipsum aliquet varius. Nam
+                    cursus tempus euismod.
+
+                    Vivamus viverra diam non ex imperdiet condimentum. In malesuada nisi a bibendum faucibus. Suspendisse ip
+                    sum nibh, ultrices vel sagittis eu, rutrum sed magna. Fusce ex elit, fermentum ac velit eu, fermentum po
+                    suere massa. Integer vel massa cursus odio facilisis aliquet nec eu ipsum. Phasellus at rutrum metus. Nu
+                    lla imperdiet dolor ultrices efficitur pellentesque. Donec malesuada ac tortor nec iaculis.
+                </p>
+            </div>
+            <div class="case">
+                <p>
+                    CASE 3
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempus vestibulum mollis. Suspendisse
+                    fermentum congue massa quis semper. Nullam vel nunc eleifend, pellentesque nunc ut, consectetur leo. Nam
+                    non libero dictum, efficitur purus id, semper erat. Aenean finibus, nisl nec consectetur vestibulum, dia
+                    m sapien viverra dolor, at sagittis mi tortor aliquam ligula. Nulla sit amet mauris mi. In hac habitasse
+                    platea dictumst. Nunc a magna vulputate elit elementum pulvinar. Vivamus in lectus faucibus, ultricies n
+                    unc non, bibendum quam. In vitae diam non eros tempor dignissim id quis magna. Donec id purus interdum,
+                    finibus felis sit amet, tincidunt risus. Pellentesque convallis lacus sit amet ipsum aliquet varius. Nam
+                    cursus tempus euismod.
+
+                    Vivamus viverra diam non ex imperdiet condimentum. In malesuada nisi a bibendum faucibus. Suspendisse ip
+                    sum nibh, ultrices vel sagittis eu, rutrum sed magna. Fusce ex elit, fermentum ac velit eu, fermentum po
+                    suere massa. Integer vel massa cursus odio facilisis aliquet nec eu ipsum. Phasellus at rutrum metus. Nu
+                    lla imperdiet dolor ultrices efficitur pellentesque. Donec malesuada ac tortor nec iaculis.
+                </p>
+            </div>
+        </div>
+        
+
+        <script>
+            var index = 0;
+
+            function previous() {
+                if (index == 0) {
+                    return;
+                }
+                var container = document.getElementById("container");
+
+                var oldCase = container.children[index];
+                index -= 1;
+                var newCase = container.children[index];
+                newCase.style.display = "block";
+                oldCase.style.display = "none";
+            }
+            function next() {
+                if (index == 3) {
+                    return;
+                }
+                var container = document.getElementById("container");
+
+                var oldCase = container.children[index];
+                index += 1;
+                var newCase = container.children[index];
+                newCase.style.display = "block";
+                oldCase.style.display = "none";
+            }
+
+            //We do not hide anything on default in case the user has disabled javascript in the browser
+            var container = document.getElementById("container");
+
+            for (var i = 1; i < 3; i++){
+                container.children[i].style.display = "none";
+            }
+
+
+        </script>
+
+    </div>
+
+
+</div>
+
+
+<!-- Footer included with the include.js-script -->
+<footer id="footer">
+</footer>
+<script type="text/javascript" src="js/include.js"></script>
+</body>
+
+</html>
