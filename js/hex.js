@@ -80,22 +80,30 @@ function set_square_style(){
 }
 
 
-function new_hex(className){
+function new_hex(className, workNumber){
     var hex0 = document.createElement("div");
     var hex1 = document.createElement("div");
     var hex2 = document.createElement("div");
 
     var img = document.createElement("img");
     img.className = "galleryImage_" + className;
-    img.src = "./img/LEGOs.jpg";
+    img.src = "./work/" + workNumber + "/hex.jpg";
+
+
+    var link = document.createElement("a");
+    link.href = "./case.html#" + workNumber;
 
     hex0.className = "hex0_" + className;
     hex1.className = "hex1_" + className;
     hex2.className = "hex2_" + className;
 
-    hex2.appendChild(img);
+
+    link.appendChild(img);
+
+    hex2.appendChild(link);
     hex1.appendChild(hex2);
     hex0.appendChild(hex1);
+
 
     return hex0
 }
@@ -112,7 +120,7 @@ function clear_container(){
 
 function fill_cont(className){
     for (i = 0; i <20; i++){
-        var hex0 = new_hex(className);
+        var hex0 = new_hex(className, 1); //change to file and folder number
         var container = document.getElementById("container");
         container.appendChild(hex0);
     }
