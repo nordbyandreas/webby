@@ -423,32 +423,42 @@ nav a:hover {
 COLORS
 ********************/
 #container {
-    padding-right: 5%;
-    padding-left: 5%;
     text-align: left;
 }
 
 #nextButton{
-
     position: absolute;
-    height: 20px;
-    width: 20px;
+    height: 100%;
+    width: 50%;
 
     right: 0;
 
     bottom: auto;
     top: auto;
+
+    background-color: #bbbbbb;
+    opacity: 0;
+
 }
 
-
 #prevButton{
-
     position: absolute;
 
-    height: 20px;
-    width: 20px;
+    height: 100%;
+    width: 50%;
 
     left: 0;
     bottom: auto;
     top: auto;
+
+    background-color: #bbbbbb;
+    opacity: 0;
+}
+
+#nextButton:hover{
+    opacity: 0.5;
+}
+
+#prevButton:hover{
+    opacity: 0.5;
 }
