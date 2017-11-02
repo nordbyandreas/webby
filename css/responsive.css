@@ -159,4 +159,7 @@ MOBILE SCREEN
   .blogItem {
     width: 95%;
   }
+  #about_employeeOverview {
+    display: none;
+  }
 }
