@@ -272,42 +272,50 @@ PAGE: WORK
 PAGE: ABOUT
 ********************/
 
+#about_page img {
+  opacity: 0.85;
+}
 #about_employeeOverview {
   border-bottom: 1px solid #423f3f;
   max-width: 800px;
+  margin: auto;
   padding-bottom: 30px;
 }
-
-.about_empPic {
+#about_employeeOverview img {
+  display: inline-block;
   height: 140px;
-  width: 140px;
 }
 
-#about_empDetailsWrapper {
+#employeeWrapper {
   width: 80%;
   margin: 30px auto;
 }
 
-.about_empDet {
-  border-bottom: 1px dashed #423f3f;
-  max-width: 800px;
-  overflow: hidden;
+#empList {
+  list-style: none;
+}
+#empList li {
+  min-height: 100px;
   text-align: left;
 }
-
-.about_empDet img {
+#empList li:nth-child(n + 2) {
+  /* item 2,3,4,5... gets a dividing line. CSS starts counting from n=0 */
+  border-top: 1px dashed #423f3f;
+}
+#empList img {
   float: left;
   height: 100px;
   width: 100px;
   padding: 5px 15px;
   display: inline-block;
 }
-.about_empDet h2 {
-  font-size: 1em;
-}
-.about_empText {
+#empList p {
   font-size: 0.8em;
   color: #333;
+}
+#empList h2 {
+  font-size: 1em;
+  font-style: italic;
 }
 
 /********************
