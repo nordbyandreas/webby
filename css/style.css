@@ -276,42 +276,50 @@ PAGE: WORK
 PAGE: ABOUT
 ********************/
 
+#about_page img {
+  opacity: 0.85;
+}
 #about_employeeOverview {
-    border-bottom: 1px solid #423f3f;
-    max-width: 800px;
-    padding-bottom: 30px;
+  border-bottom: 1px solid #423f3f;
+  max-width: 800px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+#about_employeeOverview img {
+  display: inline-block;
+  height: 140px;
 }
 
-.about_empPic {
-    height: 140px;
-    width: 140px;
+#employeeWrapper {
+  width: 80%;
+  margin: 30px auto;
 }
 
-#about_empDetailsWrapper {
-    width: 80%;
-    margin: 30px auto;
+#empList {
+  list-style: none;
 }
-
-.about_empDet {
-    border-bottom: 1px dashed #423f3f;
-    max-width: 800px;
-    overflow: hidden;
-    text-align: left;
+#empList li {
+  min-height: 100px;
+  text-align: left;
 }
-
-.about_empDet img {
-    float: left;
-    height: 100px;
-    width: 100px;
-    padding: 5px 15px;
-    display: inline-block;
+#empList li:nth-child(n + 2) {
+  /* item 2,3,4,5... gets a dividing line. CSS starts counting from n=0 */
+  border-top: 1px dashed #423f3f;
 }
-.about_empDet h2 {
-    font-size: 1em;
+#empList img {
+  float: left;
+  height: 100px;
+  width: 100px;
+  padding: 5px 15px;
+  display: inline-block;
 }
-.about_empText {
-    font-size: 0.8em;
-    color: #333;
+#empList p {
+  font-size: 0.8em;
+  color: #333;
+}
+#empList h2 {
+  font-size: 1em;
+  font-style: italic;
 }
 
 /********************

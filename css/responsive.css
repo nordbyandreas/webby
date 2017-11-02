@@ -188,6 +188,7 @@ MOBILE SCREEN
 
 ********************/
 @media screen and (max-width: 540px) {
+
     .social-icon {
         width: 30px;
         height: 30px;
@@ -222,6 +223,10 @@ MOBILE SCREEN
     .blogItem {
         width: 95%;
     }
+  
+    #about_employeeOverview {
+    display: none;
+    }
 
     #nextButton img{
         /*display: none;*/
@@ -232,6 +237,7 @@ MOBILE SCREEN
         /*display: none;*/
         height: 30px;
     }
+
 
 }
 
