@@ -44,6 +44,7 @@ ul {
     min-height: 200px;
     width: 100%;
     text-align: center;
+
 }
 a {
     text-decoration: none;
@@ -426,30 +427,32 @@ COLORS
     text-align: left;
 }
 
+#textWrapper{
+    position: relative;
+}
+
 #nextButton{
     position: absolute;
-    height: 100%;
-    width: 50%;
+    height:100%;
+    max-width: 50%;
 
     right: 0;
-
-    bottom: auto;
-    top: auto;
+    top: 0;
+    bottom: 0;
 
     background-color: #bbbbbb;
     opacity: 0;
-
 }
 
 #prevButton{
     position: absolute;
 
     height: 100%;
-    width: 50%;
+    max-width: 50%;
 
     left: 0;
-    bottom: auto;
-    top: auto;
+    top: 0;
+    bottom: 0;
 
     background-color: #bbbbbb;
     opacity: 0;
