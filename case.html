@@ -23,7 +23,7 @@
         <h1 class="pageTitle">Case</h1>
 
         <div id="container">
-            <div class="case">
+            <div class="case" >
                 <p>
                     CASE 1
 
@@ -42,7 +42,7 @@
                     lla imperdiet dolor ultrices efficitur pellentesque. Donec malesuada ac tortor nec iaculis.
                 </p>
             </div>
-            <div class="case">
+            <div class="case" >
                 <p>
                     CASE 2
 
@@ -61,7 +61,7 @@
                     lla imperdiet dolor ultrices efficitur pellentesque. Donec malesuada ac tortor nec iaculis.
                 </p>
             </div>
-            <div class="case">
+            <div class="case" >
                 <p>
                     CASE 3
 
@@ -84,6 +84,7 @@
 
 
         <script>
+
             var index = 0;
 
             function prev() {
@@ -136,13 +137,21 @@
             content.insertBefore(nextButton, content.children[1]);
             content.insertBefore(prevButton, nextButton);
 
+
+
+            //link to an article like this .../work.html#<number>
+            var url = window.location.href;
+            var argument = url.split("#")[1]; //if you break it: it's your own fault (no need to cast exceptions)
+            
+            var index = parseInt(argument);
+
             //We do not hide anything on default in case the user has disabled javascript in the browser
             var container = document.getElementById("container");
 
-            for (var i = 1; i < 3; i++){
+            for (var i = 0; i < 3; i++){
                 container.children[i].style.display = "none";
             }
-
+            container.children[index].style.display = "block";
 
         </script>
 
