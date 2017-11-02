@@ -18,13 +18,9 @@
     <header id="header">
     </header>
 
-    <div class="content">
+    <div id="content">
 
         <h1 class="pageTitle">Case</h1>
-
-        <button onclick="previous()">Click Me</button>
-        <button onclick="next()">Click Me</button>
-
 
         <div id="container">
             <div class="case">
@@ -85,12 +81,16 @@
                 </p>
             </div>
         </div>
-        
+
 
         <script>
             var index = 0;
 
-            function previous() {
+            function prev() {
+
+                console.log("prev");
+                console.log(index);
+
                 if (index == 0) {
                     return;
                 }
@@ -103,7 +103,10 @@
                 oldCase.style.display = "none";
             }
             function next() {
-                if (index == 3) {
+
+                console.log("next");
+                console.log(index);
+                if (index == 2) {
                     return;
                 }
                 var container = document.getElementById("container");
@@ -114,6 +117,24 @@
                 newCase.style.display = "block";
                 oldCase.style.display = "none";
             }
+
+            var nextButton = document.createElement("img");
+            var prevButton = document.createElement("img");
+
+            nextButton.id = "nextButton";
+            prevButton.id = "prevButton";
+
+            nextButton.src = "img/triangleRight.png";
+            prevButton.src = "img/triangleLeft.png";
+
+
+            nextButton.addEventListener("click", next);
+            prevButton.addEventListener("click", prev);
+
+            var content = document.getElementById("content");
+
+            content.insertBefore(nextButton, content.children[1]);
+            content.insertBefore(prevButton, nextButton);
 
             //We do not hide anything on default in case the user has disabled javascript in the browser
             var container = document.getElementById("container");
