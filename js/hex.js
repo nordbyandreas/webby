@@ -162,10 +162,10 @@ function resize() {
 
     hInWidth += scale
 
-    if (hInWidth <= 1 && 0 < scale){ //scale up from 1 or less than one
+    if (hInWidth < 1){
         return
     }
-    else if(hInWidth == 1 && scale < 0){
+    else if(hInWidth == 1 && scale < 0){ //scale down to one
         clear_container();
         fill_cont("tiny");
         return
