@@ -115,7 +115,7 @@ function clear_container(){
 
 
 function fill_cont(className){
-    for (i = 0; i <19; i++){
+    for (i = 0; i <50; i++){
         var hex0 = new_hex(className, i%17 + 1); //change to file and folder number
         var container = document.getElementById("container");
         container.appendChild(hex0);
@@ -162,10 +162,15 @@ function resize() {
 
     hInWidth += scale
 
-    if (hInWidth <= 2 && 0 < scale){ //scale up from 1 or less than one
+    if (hInWidth <= 1 && 0 < scale){ //scale up from 1 or less than one
         return
     }
-    else if (hInWidth == 2 && scale < 0) {  //scale down from 3
+    else if(hInWidth == 1 && scale < 0){
+        clear_container();
+        fill_cont("tiny");
+        return
+    }
+    else if (hInWidth == 2 && scale != 0) {  //scale up/down from 3
         clear_container();
         fill_cont("small");
         return
