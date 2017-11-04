@@ -83,7 +83,7 @@ function new_hex(className, workNumber){
 
     var img = document.createElement("img");
     img.className = "galleryImage_" + className;
-    img.src = "./work/" + workNumber + "/hex.jpg";
+    img.src = "./work/" + workNumber + "/square.jpg";
 
 
     var link = document.createElement("a");
@@ -115,8 +115,8 @@ function clear_container(){
 
 
 function fill_cont(className){
-    for (i = 0; i <20; i++){
-        var hex0 = new_hex(className, 1); //change to file and folder number
+    for (i = 0; i <19; i++){
+        var hex0 = new_hex(className, i%17 + 1); //change to file and folder number
         var container = document.getElementById("container");
         container.appendChild(hex0);
     }
