@@ -21,7 +21,7 @@ function next() {
 
     console.log("next");
     console.log(index);
-    if (index == 2) {
+    if (index == 9) {
         return;
     }
     var container = document.getElementById("container");
@@ -75,7 +75,9 @@ var index = parseInt(argument);
 //We do not hide anything on default in case the user has disabled javascript in the browser
 var container = document.getElementById("container");
 
-for (var i = 0; i < 3; i++){
+var numberOfCases = container.children.length;
+
+for (var i = 0; i < numberOfCases; i++){
     container.children[i].style.display = "none";
 }
 container.children[index].style.display = "block";
