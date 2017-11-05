@@ -1,4 +1,6 @@
 
+var numberOfHexagons = 19;
+
 function getHexWidth(){
     var container = document.getElementById("container");
     var computerStyle = window.getComputedStyle(container);
@@ -115,7 +117,14 @@ function clear_container(){
 
 
 function fill_cont(className){
-    for (i = 0; i <50; i++){
+
+    var numberOfHexInTwoRows = 2*hInWidth -1;
+
+    console.log(numberOfHexagons);
+    console.log(numberOfHexInTwoRows);
+    console.log(numberOfHexagons%numberOfHexInTwoRows);
+
+    for (i = 0; i <numberOfHexagons + (hInWidth - numberOfHexagons%numberOfHexInTwoRows - 1); i++){
         var hex0 = new_hex(className, i%17 + 1); //change to file and folder number
         var container = document.getElementById("container");
         container.appendChild(hex0);
@@ -180,7 +189,8 @@ function resize() {
         fill_cont("large");
     }
     else{
-        remove_elements_by_class("breakline");
+        clear_container();
+        fill_cont("large");
     }
     addParagraphs(hInWidth);
 }
