@@ -8,17 +8,17 @@ It's not ideal, but it gets the job done.
 window.onload = function() {
   document.getElementById('header').innerHTML =
     '<ul class="nav-bar left">' +
-    '<li class="nav-link"><a href="/index.html">HOME</a></li>' +
-    '<li class="nav-link"><a href="/work.html">WORK</a></li>' +
-    '<li class="nav-link"><a href="/about.html">ABOUT</a></li>' +
+    '<li class="nav-link"><a href="./index.html">HOME</a></li>' +
+    '<li class="nav-link"><a href="./work.html">WORK</a></li>' +
+    '<li class="nav-link"><a href="./about.html">ABOUT</a></li>' +
     '</ul>' +
     '<a class="logo" href="index.html">' +
     '<img src="/img/logo.png"/>' +
     '</a>' +
     '<ul class="nav-bar right">' +
-    '<li class="nav-link"><a href="/prices.html">PRICES</a></li>' +
-    '<li class="nav-link"><a href="/faq.html">FAQ</a></li>' +
-    '<li class="nav-link"><a href="/contact.html">CONTACT</a></li>' +
+    '<li class="nav-link"><a href="./prices.html">PRICES</a></li>' +
+    '<li class="nav-link"><a href="./faq.html">FAQ</a></li>' +
+    '<li class="nav-link"><a href="./contact.html">CONTACT</a></li>' +
     '</ul>';
 
   document.getElementById('footer').innerHTML =
