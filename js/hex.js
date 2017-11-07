@@ -1,5 +1,5 @@
 
-var numberOfHexagons = 19;
+var numberOfHexagons = 17;
 
 function getHexWidth(){
     var container = document.getElementById("container");
@@ -119,12 +119,7 @@ function clear_container(){
 function fill_cont(className){
 
     var numberOfHexInTwoRows = 2*hInWidth -1;
-
-    console.log(numberOfHexagons);
-    console.log(numberOfHexInTwoRows);
-    console.log(numberOfHexagons%numberOfHexInTwoRows);
-
-    for (i = 0; i <numberOfHexagons + (hInWidth - numberOfHexagons%numberOfHexInTwoRows - 1); i++){
+    for (i = 0; i <numberOfHexagons + (numberOfHexInTwoRows - (numberOfHexagons)%numberOfHexInTwoRows); i++){
         var hex0 = new_hex(className, i%17 + 1); //change to file and folder number
         var container = document.getElementById("container");
         container.appendChild(hex0);
