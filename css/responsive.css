@@ -233,4 +233,8 @@ MOBILE SCREEN
     /*display: none;*/
     height: 30px;
   }
+
+  .workImgSquare{
+    width: 100%;
+  }
 }

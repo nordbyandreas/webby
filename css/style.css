@@ -538,3 +538,17 @@ Case
   left: 0;
   opacity: 0.5;
 }
+
+.workImgSquare{
+  margin: 0em 0em 1em 1em;
+  float: right;
+  height: auto;
+  width: 50%;
+}
+
+.workImgHorisontal{
+  maring: 1em;
+  flaot: top;
+  height: auto;
+  width: 100%;
+}
