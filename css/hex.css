@@ -112,3 +112,18 @@
 .wrapwrap{
     min-width: 360px;
 }
+
+
+.workImgContainer{
+    position: relative;
+}
+
+
+.workImg{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+
+    max-width: 110%;
+    max-height: 110%;
+}

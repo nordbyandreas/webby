@@ -29,6 +29,37 @@
                 <!-- hexagon grid -->
                 <div id = "container"></div>
                 <script src="js/hex.js"></script>
+
+                <script>
+                    var numberOfHexagons = 16;
+
+                    var wEM = 12;
+
+                    var hWidth = getHexWidth();
+                    var hInWidth = getHexInWidth(hWidth);
+                    var screenIsWide = screenIsWide(hWidth);
+
+                    var doit;
+                    var onresize = function(e) {
+                        clearTimeout(doit);
+                        doit = setTimeout(resize, 5);
+                    }
+
+
+                    window.addEventListener("resize", onresize);
+
+
+                    if (3 <= hInWidth){
+                        fill_cont("large");
+                        addParagraphs(hInWidth);
+                    }
+
+
+                    else{
+                        fill_cont("small");
+                    }
+                </script>
+
                 <!-- end of hexagon grid -->
             </div>
         </div>

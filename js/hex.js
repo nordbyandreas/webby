@@ -1,5 +1,4 @@
 
-var numberOfHexagons = 17;
 
 function maxHex(hex){
     if (5 < hex){
@@ -12,7 +11,7 @@ function getHexWidth(){
     var container = document.getElementById("container");
     var computerStyle = window.getComputedStyle(container);
     var fontSize = parseInt(computerStyle.getPropertyValue('font-size'));
-    var hWidth = (12+0.5)*parseInt(fontSize);
+    var hWidth = (wEM+0.5)*parseInt(fontSize);
 
     return hWidth;
 }
@@ -34,10 +33,6 @@ function getHexInWidth(hWidth){
     return maxHex(Math.floor(cWidth/hWidth));
 }
 
-
-var hWidth = getHexWidth();
-var hInWidth = getHexInWidth(hWidth);
-var screenIsWide = screenIsWide(hWidth);
 
 function scaleUpDown() {
     var container = document.getElementById("container");
@@ -126,7 +121,18 @@ function clear_container(){
 
 function fill_cont(className){
     var numberOfHexInTwoRows = 2*hInWidth -1;
-    for (i = 0; i <numberOfHexagons + (numberOfHexInTwoRows - (numberOfHexagons)%numberOfHexInTwoRows); i++){
+
+    var variable = 0;
+    if ((numberOfHexagons)%numberOfHexInTwoRows <= hInWidth -1){
+        variable = hInWidth -1 - numberOfHexagons%numberOfHexInTwoRows;
+        console.log("sdflkjsdflkjsdflkjsdlfkjsdlkfjsldkfj");
+        console.log(variable);
+        console.log(hInWidth);
+    }
+    else {
+        variable = (numberOfHexInTwoRows - (numberOfHexagons)%numberOfHexInTwoRows);
+    }
+    for (i = 0; i <numberOfHexagons + variable; i++){
         var hex0 = new_hex(className, i%17 + 1); //change to file and folder number
         var container = document.getElementById("container");
         container.appendChild(hex0);
@@ -197,23 +203,3 @@ function resize() {
     addParagraphs(hInWidth);
 }
 
-
-var doit;
-var onresize = function(e) {
-    clearTimeout(doit);
-    doit = setTimeout(resize, 5);
-}
-
-
-window.addEventListener("resize", onresize);
-
-
-if (3 <= hInWidth){
-    fill_cont("large");
-    addParagraphs(hInWidth);
-}
-
-
-else{
-    fill_cont("small");
-}

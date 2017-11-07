@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/hex.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   </head>
@@ -22,7 +24,46 @@
 
 			<div class="content">
 
+
+
         <h1 class="pageTitle">We are Tinc.</h1>
+
+
+              <!-- hexagon grid -->
+              <div id = "container"></div>
+              <script src="js/hex.js"></script>
+
+              <script>
+                  var numberOfHexagons = 10;
+
+                  var wEM = 12;
+
+
+                  var hWidth = getHexWidth();
+                  var hInWidth = getHexInWidth(hWidth);
+                  var screenIsWide = screenIsWide(hWidth);
+
+                  var doit;
+                  var onresize = function(e) {
+                      clearTimeout(doit);
+                      doit = setTimeout(resize, 5);
+                  }
+
+
+                  window.addEventListener("resize", onresize);
+
+
+                  if (3 <= hInWidth){
+                      fill_cont("large");
+                      addParagraphs(hInWidth);
+                  }
+
+
+                  else{
+                      fill_cont("small");
+                  }
+              </script>
+              <!-- end of hexagon grid -->
 
       <!-- ADD PAGE CONTENT  HERE :D -->
         <div id="blogSection">
