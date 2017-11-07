@@ -7,10 +7,6 @@
     <list default="true" id="23f90317-a7d7-4e5e-bff2-86bf3cbfb0ff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/hex.css" afterPath="$PROJECT_DIR$/css/hex.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/hex.js" afterPath="$PROJECT_DIR$/js/hex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/work.html" afterPath="$PROJECT_DIR$/work.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,7 +23,7 @@
       <file leaf-file-name="hex.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/hex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
+            <state relative-caret-position="1890">
               <caret line="126" column="31" lean-forward="false" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
               <folding />
             </state>
@@ -37,7 +33,7 @@
       <file leaf-file-name="work.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/work.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="525">
               <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
@@ -47,7 +43,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
+            <state relative-caret-position="540">
               <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
               <folding />
             </state>
@@ -86,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hex.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hex.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/hex.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+            <state relative-caret-position="603">
+              <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -106,10 +102,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="747">
+            <state relative-caret-position="7200">
               <caret line="480" column="1" lean-forward="false" selection-start-line="480" selection-start-column="1" selection-end-line="480" selection-end-column="1" />
               <folding />
             </state>
@@ -139,7 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>#content</find>
       <find>new_he</find>
       <find>folder</find>
       <find>a</find>
@@ -169,6 +164,7 @@
       <find>workimg</find>
       <find>workN</find>
       <find>new_</find>
+      <find>z</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,8 +183,8 @@
         <option value="$PROJECT_DIR$/js/case.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/hex.js" />
-        <option value="$PROJECT_DIR$/css/hex.css" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/css/hex.css" />
       </list>
     </option>
   </component>
@@ -220,7 +216,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -284,6 +279,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -372,12 +368,13 @@
       <workItem from="1510044770727" duration="978000" />
       <workItem from="1510046608385" duration="1089000" />
       <workItem from="1510048427339" duration="1494000" />
-      <workItem from="1510050239594" duration="456000" />
+      <workItem from="1510050239594" duration="1328000" />
+      <workItem from="1510052115452" duration="110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70644000" />
+    <option name="totallyTimeSpent" value="71626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -713,7 +710,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
+        <state relative-caret-position="540">
           <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
           <folding />
         </state>
@@ -721,7 +718,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/work.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="525">
           <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
@@ -729,24 +726,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/hex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
+        <state relative-caret-position="1890">
           <caret line="126" column="31" lean-forward="false" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/hex.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
+        <state relative-caret-position="7200">
           <caret line="480" column="1" lean-forward="false" selection-start-line="480" selection-start-column="1" selection-end-line="480" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/hex.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
           <folding />
         </state>
       </provider>
