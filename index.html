@@ -21,49 +21,92 @@
   <!-- header included with the include.js-script -->
 		    <header id="header">
 		    </header>
+        </div>
 
-			<div class="content">
+            <h1 class="pageTitle">We are Tinc.</h1>
+
+            <!-- hexagon grid -->
+            <div id = "container"></div>
+            <script src="js/hex.js"></script>
+
+            <script>
+
+                function addParagraphs(hInWidth){
+                    var container = document.getElementById("container");
+                    var i = hInWidth -1;
+
+                    var counter = 0;
+
+                    while (i < container.childElementCount) {
+                        add_linebreak(i);
+                        counter += 1;
+                        if (3 <= counter){
+                            clearContainerFrom(i)
+                        }
+                        i += hInWidth + 1;
+                        add_linebreak(i);
+                        counter += 1;
+                        if (3 <= counter){
+                            clearContainerFrom(i)
+                        }
+                        i += hInWidth;
+                    }
+                }
+
+                function resize() {
+                    /*
+                    Overwrite resize
+                     */
+                    console.log("RESIZE");
+                    var scale = scaleUpDown();
+
+                    if (scale == 0){
+                        return
+                    }
+
+                    hInWidth = maxHex(hInWidth+ scale)
+
+                    if (hInWidth < 1){
+                        return
+                    }
+                    else if (hInWidth == 3 && scale > 0){ //scale up to three
+                        clear_container();
+                        fill_cont("home");
+                    }
+                    else{
+                        clear_container();
+                        fill_cont("home");
+                    }
+                    addParagraphs(hInWidth);
+                }
+
+                var numberOfHexagons = 9;
+                var wEM = 9;
+                var maxiHex = 4;
+
+                var container = document.getElementById("container");
+                container.style.paddingBottom = "0em";
 
 
+                var hWidth = getHexWidth();
+                var hInWidth = getHexInWidth(hWidth);
+                var screenIsWide = screenIsWide(hWidth);
 
-        <h1 class="pageTitle">We are Tinc.</h1>
-
-
-              <!-- hexagon grid -->
-              <div id = "container"></div>
-              <script src="js/hex.js"></script>
-
-              <script>
-                  var numberOfHexagons = 10;
-
-                  var wEM = 12;
+                var doit;
+                var onresize = function(e) {
+                    clearTimeout(doit);
+                    doit = setTimeout(resize, 5);
+                }
 
 
-                  var hWidth = getHexWidth();
-                  var hInWidth = getHexInWidth(hWidth);
-                  var screenIsWide = screenIsWide(hWidth);
+                window.addEventListener("resize", onresize);
 
-                  var doit;
-                  var onresize = function(e) {
-                      clearTimeout(doit);
-                      doit = setTimeout(resize, 5);
-                  }
+                fill_cont("home");
+                addParagraphs(hInWidth);
+            </script>
 
-
-                  window.addEventListener("resize", onresize);
-
-
-                  if (3 <= hInWidth){
-                      fill_cont("large");
-                      addParagraphs(hInWidth);
-                  }
-
-
-                  else{
-                      fill_cont("small");
-                  }
-              </script>
-              <!-- end of hexagon grid -->
+        <div class="wrapper">
+            <div class="content">
 
       <!-- ADD PAGE CONTENT  HERE :D -->
         <div id="blogSection">

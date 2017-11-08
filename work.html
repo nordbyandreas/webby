@@ -21,47 +21,44 @@
         </div>
 
 
-        <div class = "wrapwrap">
-            <h1 class="pageTitle">Our Work</h1>
+        <h1 class="pageTitle">Our Work</h1>
 
-            <div class="content">
+        <div class="content">
 
-                <!-- hexagon grid -->
-                <div id = "container"></div>
-                <script src="js/hex.js"></script>
+            <!-- hexagon grid -->
+            <div id = "container"></div>
+            <script src="js/hex.js"></script>
 
-                <script>
-                    var numberOfHexagons = 16;
+            <script>
+                var numberOfHexagons = 16;
+                var wEM = 12;
+                var maxiHex = 6;
 
-                    var wEM = 12;
+                var hWidth = getHexWidth();
+                var hInWidth = getHexInWidth(hWidth);
+                var screenIsWide = screenIsWide(hWidth);
 
-                    var hWidth = getHexWidth();
-                    var hInWidth = getHexInWidth(hWidth);
-                    var screenIsWide = screenIsWide(hWidth);
+                var doit;
+                var onresize = function(e) {
+                    clearTimeout(doit);
+                    doit = setTimeout(resize, 5);
+                }
 
-                    var doit;
-                    var onresize = function(e) {
-                        clearTimeout(doit);
-                        doit = setTimeout(resize, 5);
-                    }
+                window.addEventListener("resize", onresize);
 
+                if (3 <= hInWidth){
+                    fill_cont("large");
+                    addParagraphs(hInWidth);
+                }
+                else if (2 <= hInWidth){
+                    fill_cont("small");
+                }
+                else{
+                    fill_cont("tiny");
+                }
+            </script>
 
-                    window.addEventListener("resize", onresize);
-
-
-                    if (3 <= hInWidth){
-                        fill_cont("large");
-                        addParagraphs(hInWidth);
-                    }
-
-
-                    else{
-                        fill_cont("small");
-                    }
-                </script>
-
-                <!-- end of hexagon grid -->
-            </div>
+            <!-- end of hexagon grid -->
         </div>
 
       <!-- Footer included with the include.js-script -->

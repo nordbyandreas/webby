@@ -515,6 +515,7 @@ Case
 
 .case {
   text-align: justify;
+  display: none;
 }
 
 #nextButton {
@@ -528,6 +529,19 @@ Case
   opacity: 0.5;
 }
 
+#nextButton:hover {
+  cursor: pointer;
+}
+
+#prevButton:hover {
+  cursor: pointer;
+}
+
+#nextButton img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 #prevButton {
   position: absolute;
 
@@ -539,16 +553,29 @@ Case
   opacity: 0.5;
 }
 
-.workImgSquare {
-  margin: 0em 0em 1em 1em;
-  float: right;
-  height: auto;
-  width: 50%;
+#prevButton img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.workImgHorisontal {
-  maring: 1em;
-  flaot: top;
-  height: auto;
+.workImgContainer {
+  margin: 0em 0em 1em 1em;
+  float: right;
+  width: 50%;
+  overflow: hidden;
+}
+.workImgContainer img {
+  min-width: 100%;
+  min-height: 100%;
+
+  max-width: 110%;
+  max-height: 110%;
+}
+
+#container {
+  min-width: 360px;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 7em;
   width: 100%;
 }
