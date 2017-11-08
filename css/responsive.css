@@ -142,6 +142,14 @@ TABLET
     left: 0;
   }
 
+  #nextButton:hover {
+    cursor: pointer;
+  }
+
+  #prevButton:hover {
+    cursor: pointer;
+  }
+
   #nextButton img {
     /*display: none;*/
     position: absolute;
@@ -198,6 +206,14 @@ MOBILE SCREEN
 
   #about_employeeOverview {
     display: none;
+  }
+
+  #nextButton:hover {
+    cursor: pointer;
+  }
+
+  #prevButton:hover {
+    cursor: pointer;
   }
 
   #nextButton img {

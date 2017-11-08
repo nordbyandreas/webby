@@ -85,6 +85,10 @@
     max-height: 110%;
 }
 
+.galleryImage_small:hover {
+    opacity: 0.5;
+}
+
 .hex0_tiny{
     min-width: 360px;
     min-height: 360px;
@@ -117,6 +121,10 @@
 
     max-width: 110%;
     max-height: 110%;
+}
+
+.galleryImage_tiny:hover {
+    opacity: 0.5;
 }
 
 /*

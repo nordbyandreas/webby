@@ -131,7 +131,7 @@ function fill_cont(className){
         rest = hInWidth -1 - numberOfHexagons%numberOfHexInTwoRows;
     }
     else {
-        rest = (numberOfHexInTwoRows - (numberOfHexagons)%numberOfHexInTwoRows) -2;
+        rest = (numberOfHexInTwoRows - (numberOfHexagons)%numberOfHexInTwoRows) + hInWidth-1;
     }
     for (i = 0; i <numberOfHexagons + rest; i++){
         var hex0 = new_hex(className, i%17 + 1); //change to file and folder number
