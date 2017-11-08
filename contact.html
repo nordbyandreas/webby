@@ -44,6 +44,24 @@
         </a>
       </div>
 
+      <!-- Contact form isn't actually sent, but implementing function is easy from here -->
+      <div>
+        <button id="contExpand">Need to get in touch?</button>
+
+        <form id="contactForm">
+          <fieldset><legend id="remove">x</legend>
+          <label for="name">Name:</label>
+            <input id="name" type="text" name="name" placeholder="Name" size="30px" required>
+          <label for="email">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Email" size="30px" maxlength="40" required>
+          <label for="message">Your message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="35" required></textarea><br>
+          <input id="contact-submit" type="submit" name="submit">
+        </fieldset>
+        </form>
+
+      </div>
+
       <b class="cp">Or find us at SomeStreet 21, 7040, Trondheim</b>
 
       <div id="map"></div>
@@ -61,6 +79,8 @@
 		<footer id="footer">
 		</footer>
 		<script type="text/javascript" src="js/include.js"></script>
+
+    <script type="text/javascript" src="js/contactform.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChENB_L65HFnEJtXgf0A5R0hx2PvWA9aU&callback=initMap">
     </script>
     <script>
