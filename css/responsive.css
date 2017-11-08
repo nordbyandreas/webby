@@ -156,30 +156,6 @@ TABLET
     left: 0;
   }
 
-  #nextButton:hover {
-    background-color: #bbbbbb;
-    opacity: 0.5;
-  }
-
-  #nextButton:hover img {
-    content: url('../img/triangleRight.png');
-    opacity: 0.5;
-    display: none;
-  }
-
-  #prevButton:hover {
-    /*background-color: #bbbbbb;*/
-    background-color: #bbbbbb;
-    opacity: 0.5;
-  }
-
-  #prevButton:hover img {
-    /*content: url("../img/triangleLeft.png");*/
-    display: none;
-    opacity: 0.5;
-  }
-}
-
 /********************
 MOBILE SCREEN
 
@@ -234,7 +210,10 @@ MOBILE SCREEN
     height: 30px;
   }
 
-  .workImgSquare{
+  .workImgContainer{
+    margin: 0em 0em 1em 1em;
+    float: top;
     width: 100%;
+    height: 100%;
   }
 }

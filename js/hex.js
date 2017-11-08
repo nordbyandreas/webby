@@ -1,8 +1,8 @@
 
 
 function maxHex(hex){
-    if (5 < hex){
-        return 6
+    if (maxiHex <= hex){
+        return maxiHex
     }
     else return hex
 }
@@ -11,7 +11,7 @@ function getHexWidth(){
     var container = document.getElementById("container");
     var computerStyle = window.getComputedStyle(container);
     var fontSize = parseInt(computerStyle.getPropertyValue('font-size'));
-    var hWidth = (wEM+0.5)*parseInt(fontSize);
+    var hWidth = (wEM+ wEM/24)*parseInt(fontSize);
 
     return hWidth;
 }
@@ -38,7 +38,12 @@ function scaleUpDown() {
     var container = document.getElementById("container");
     var cWidth = container.offsetWidth;
 
-    if (cWidth < hWidth*hInWidth) {
+    console.log(cWidth);
+
+    if (cWidth < 360){
+        return 0;
+    }
+    else if (cWidth < hWidth*hInWidth) {
         return -1
     }
     else if (hWidth*(1 + hInWidth) <= cWidth){
@@ -118,21 +123,17 @@ function clear_container(){
     }
 }
 
-
 function fill_cont(className){
     var numberOfHexInTwoRows = 2*hInWidth -1;
 
-    var variable = 0;
+    var rest = 0;
     if ((numberOfHexagons)%numberOfHexInTwoRows <= hInWidth -1){
-        variable = hInWidth -1 - numberOfHexagons%numberOfHexInTwoRows;
-        console.log("sdflkjsdflkjsdflkjsdlfkjsdlkfjsldkfj");
-        console.log(variable);
-        console.log(hInWidth);
+        rest = hInWidth -1 - numberOfHexagons%numberOfHexInTwoRows;
     }
     else {
-        variable = (numberOfHexInTwoRows - (numberOfHexagons)%numberOfHexInTwoRows);
+        rest = (numberOfHexInTwoRows - (numberOfHexagons)%numberOfHexInTwoRows) -2;
     }
-    for (i = 0; i <numberOfHexagons + variable; i++){
+    for (i = 0; i <numberOfHexagons + rest; i++){
         var hex0 = new_hex(className, i%17 + 1); //change to file and folder number
         var container = document.getElementById("container");
         container.appendChild(hex0);
@@ -153,6 +154,15 @@ function add_linebreak(index){
     var linebreak = document.createElement("br");
     linebreak.className = "breakline";
     container.insertBefore(linebreak, container.children[index]);
+}
+
+
+function clearContainerFrom(index){
+    var container = document.getElementById("container");
+    var children = container.children;
+    while(children.length > index -1){
+        children[index].parentNode.removeChild(children[index]);
+    }
 }
 
 
