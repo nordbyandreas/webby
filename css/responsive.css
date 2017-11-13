@@ -40,7 +40,6 @@ TABLET
   /********************
     HEADER / NAVBAR
     ********************/
-
   #header {
     display: block;
     margin-top: 50px;
@@ -59,10 +58,12 @@ TABLET
     width: 100%;
     display: inline-block;
   }
+
   .left {
     order: 2;
     text-align: center;
   }
+
   .right {
     order: 3;
     text-align: center;
@@ -121,7 +122,6 @@ TABLET
   /********************
         CASE BUTTONS
     ********************/
-
   #nextButton {
     position: absolute;
 
@@ -163,6 +163,7 @@ TABLET
     height: 50px;
     left: 0;
   }
+}
 
 /********************
 MOBILE SCREEN
