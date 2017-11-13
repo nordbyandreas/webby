@@ -38,7 +38,7 @@ function scaleUpDown() {
     var container = document.getElementById("container");
     var cWidth = container.offsetWidth;
 
-    console.log(cWidth);
+    //console.log(cWidth);
 
     if (cWidth < 360){
         return 0;
@@ -160,7 +160,7 @@ function add_linebreak(index){
 function clearContainerFrom(index){
     var container = document.getElementById("container");
     var children = container.children;
-    while(children.length > index -1){
+    while(children.length > index){
         children[index].parentNode.removeChild(children[index]);
     }
 }
@@ -180,7 +180,7 @@ function addParagraphs(hInWidth){
 
 
 function resize() {
-    console.log("RESIZE");
+    //console.log("RESIZE");
     var scale = scaleUpDown();
 
     if (scale == 0){

@@ -1,8 +1,8 @@
 
 function prev() {
 
-    console.log("prev");
-    console.log(index);
+    //console.log("prev");
+    //console.log(index);
 
     if (index == 0) {
         return;
@@ -17,8 +17,8 @@ function prev() {
 }
 function next() {
 
-    console.log("next");
-    console.log(index);
+    //console.log("next");
+    //console.log(index);
     if (index == numberOfCases -1) {
         return;
     }
