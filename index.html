@@ -38,13 +38,13 @@
                     var counter = 0;
 
                     while (i < container.childElementCount) {
-                        add_linebreak(i);
+                        addLinebreak(i);
                         counter += 1;
                         if (3 <= counter){
                             clearContainerFrom(i)
                         }
                         i += hInWidth + 1;
-                        add_linebreak(i);
+                        addLinebreak(i);
                         counter += 1;
                         if (3 <= counter){
                             clearContainerFrom(i)
@@ -70,12 +70,12 @@
                         return
                     }
                     else if (hInWidth == 3 && scale > 0){ //scale up to three
-                        clear_container();
-                        fill_cont("home");
+                        clearContainer();
+                        fillCont("home");
                     }
                     else{
-                        clear_container();
-                        fill_cont("home");
+                        clearContainer();
+                        fillCont("home");
                     }
                     addParagraphs(hInWidth);
                 }
@@ -101,7 +101,7 @@
 
                 window.addEventListener("resize", onresize);
 
-                fill_cont("home");
+                fillCont("home");
                 addParagraphs(hInWidth);
             </script>
 

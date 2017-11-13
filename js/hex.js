@@ -69,7 +69,7 @@ function setHexStyle(){
 }
 
 
-function set_square_style(){
+function setSquareStyle(){
     var hex0 = document.getElementsByClassName("hex0_large");
     var hex1 = document.getElementsByClassName("hex1_large");
     var hex2 = document.getElementsByClassName("hex2_large");
@@ -86,7 +86,7 @@ function set_square_style(){
 }
 
 
-function new_hex(className, workNumber){
+function newHex(className, workNumber){
     var hex0 = document.createElement("div");
     var hex1 = document.createElement("div");
     var hex2 = document.createElement("div");
@@ -115,7 +115,7 @@ function new_hex(className, workNumber){
 }
 
 
-function clear_container(){
+function clearContainer(){
     var container = document.getElementById("container");
     var children = container.children;
     while(children.length > 0){
@@ -123,7 +123,7 @@ function clear_container(){
     }
 }
 
-function fill_cont(className){
+function fillCont(className){
     var numberOfHexInTwoRows = 2*hInWidth -1;
 
     var rest = 0;
@@ -134,22 +134,22 @@ function fill_cont(className){
         rest = (numberOfHexInTwoRows - (numberOfHexagons)%numberOfHexInTwoRows) + hInWidth-1;
     }
     for (i = 0; i <numberOfHexagons + rest; i++){
-        var hex0 = new_hex(className, i%17 + 1); //change to file and folder number
+        var hex0 = newHex(className, i%17 + 1); //change to file and folder number
         var container = document.getElementById("container");
         container.appendChild(hex0);
     }
 }
 
 
-function remove_elements_by_class(class_name){
-    var elements = document.getElementsByClassName(class_name);
+function removeElementsByClass(className){
+    var elements = document.getElementsByClassName(className);
     while(elements.length > 0){
         elements[0].parentNode.removeChild(elements[0]);
     }
 }
 
 
-function add_linebreak(index){
+function addLinebreak(index){
     var container = document.getElementById("container");
     var linebreak = document.createElement("br");
     linebreak.className = "breakline";
@@ -171,9 +171,9 @@ function addParagraphs(hInWidth){
     var i = hInWidth -1;
 
     while (i < container.childElementCount) {
-        add_linebreak(i);
+        addLinebreak(i);
         i += hInWidth + 1;
-        add_linebreak(i);
+        addLinebreak(i);
         i += hInWidth;
     }
 }
@@ -193,22 +193,22 @@ function resize() {
         return
     }
     else if(hInWidth == 1 && scale < 0){ //scale down to one
-        clear_container();
-        fill_cont("tiny");
+        clearContainer();
+        fillCont("tiny");
         return
     }
     else if (hInWidth == 2 && scale != 0) {  //scale up/down from 3
-        clear_container();
-        fill_cont("small");
+        clearContainer();
+        fillCont("small");
         return
     }
     else if (hInWidth == 3 && scale > 0){ //scale up to three
-        clear_container();
-        fill_cont("large");
+        clearContainer();
+        fillCont("large");
     }
     else{
-        clear_container();
-        fill_cont("large");
+        clearContainer();
+        fillCont("large");
     }
     addParagraphs(hInWidth);
 }

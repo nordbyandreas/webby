@@ -32,7 +32,7 @@
             <script>
                 var numberOfHexagons = 16;
                 var wEM = 12;
-                var maxiHex = 6;
+                var maxiHex = 5;
 
                 var hWidth = getHexWidth();
                 var hInWidth = getHexInWidth(hWidth);
@@ -47,14 +47,14 @@
                 window.addEventListener("resize", onresize);
 
                 if (3 <= hInWidth){
-                    fill_cont("large");
+                    fillCont("large");
                     addParagraphs(hInWidth);
                 }
                 else if (2 <= hInWidth){
-                    fill_cont("small");
+                    fillCont("small");
                 }
                 else{
-                    fill_cont("tiny");
+                    fillCont("tiny");
                 }
             </script>
 
