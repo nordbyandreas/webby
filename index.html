@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/hex.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/hex.js"></script>
 
   </head>
 
@@ -27,7 +28,6 @@
 
             <!-- hexagon grid -->
             <div id = "container"></div>
-            <script src="js/hex.js"></script>
 
             <script>
 
@@ -55,9 +55,8 @@
 
                 function resize() {
                     /*
-                    Overwrite resize
+                    Overwrites resize
                      */
-                    //console.log("RESIZE");
                     var scale = scaleUpDown();
 
                     if (scale == 0){
@@ -87,7 +86,6 @@
                 var container = document.getElementById("container");
                 container.style.paddingBottom = "0em";
 
-
                 var hWidth = getHexWidth();
                 var hInWidth = getHexInWidth(hWidth);
                 var screenIsWide = screenIsWide(hWidth);
@@ -97,7 +95,6 @@
                     clearTimeout(doit);
                     doit = setTimeout(resize, 5);
                 }
-
 
                 window.addEventListener("resize", onresize);
 
