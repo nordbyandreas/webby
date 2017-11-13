@@ -16,95 +16,95 @@
   </head>
 
   <body>
-		<div class="wrapper">
+    <div class="wrapper">
 
-  <!-- header included with the include.js-script -->
-		    <header id="header">
-		    </header>
-        </div>
+      <!-- header included with the include.js-script -->
+      <header id="header">
+      </header>
+    </div>
 
-            <h1 class="pageTitle">We are Tinc.</h1>
+    <h1 class="pageTitle">We are Tinc.</h1>
 
-            <!-- hexagon grid -->
-            <div id = "container"></div>
+    <!-- hexagon grid -->
+    <div id = "container"></div>
 
-            <script>
+    <script>
 
-                function addParagraphs(hInWidth){
-                    var container = document.getElementById("container");
-                    var i = hInWidth -1;
+      function addParagraphs(hInWidth){
+      var container = document.getElementById("container");
+      var i = hInWidth -1;
 
-                    var counter = 0;
+      var counter = 0;
 
-                    while (i < container.childElementCount) {
-                        addLinebreak(i);
-                        counter += 1;
-                        if (3 <= counter){
-                            clearContainerFrom(i)
-                        }
-                        i += hInWidth + 1;
-                        addLinebreak(i);
-                        counter += 1;
-                        if (3 <= counter){
-                            clearContainerFrom(i)
-                        }
-                        i += hInWidth;
-                    }
-                }
+      while (i < container.childElementCount) {
+                 addLinebreak(i);
+                 counter += 1;
+                 if (3 <= counter){
+                          clearContainerFrom(i)
+                          }
+                          i += hInWidth + 1;
+                          addLinebreak(i);
+                          counter += 1;
+                          if (3 <= counter){
+				   clearContainerFrom(i)
+				   }
+				   i += hInWidth;
+				   }
+				   }
 
-                function resize() {
-                    /*
-                    Overwrites resize
-                     */
-                    var scale = scaleUpDown();
+				   function resize() {
+				   /*
+				   Overwrites resize
+				   */
+				   var scale = scaleUpDown();
 
-                    if (scale == 0){
-                        return
-                    }
+				   if (scale == 0){
+				   return
+				   }
 
-                    hInWidth = maxHex(hInWidth+ scale)
+				   hInWidth = maxHex(hInWidth+ scale)
 
-                    if (hInWidth < 1){
-                        return
-                    }
-                    else if (hInWidth == 3 && scale > 0){ //scale up to three
-                        clearContainer();
-                        fillCont("home");
-                    }
-                    else{
-                        clearContainer();
-                        fillCont("home");
-                    }
-                    addParagraphs(hInWidth);
-                }
+				   if (hInWidth < 1){
+						  return
+						  }
+						  else if (hInWidth == 3 && scale > 0){ //scale up to three
+				   clearContainer();
+				   fillCont("home");
+				   }
+				   else{
+				   clearContainer();
+				   fillCont("home");
+				   }
+				   addParagraphs(hInWidth);
+				   }
 
-                var numberOfHexagons = 9;
-                var wEM = 9;
-                var maxiHex = 4;
+				   var numberOfHexagons = 9;
+				   var wEM = 9;
+				   var maxiHex = 4;
 
-                var container = document.getElementById("container");
-                container.style.paddingBottom = "0em";
+				   var container = document.getElementById("container");
+				   container.style.paddingBottom = "0em";
 
-                var hWidth = getHexWidth();
-                var hInWidth = getHexInWidth(hWidth);
-                var screenIsWide = screenIsWide(hWidth);
+				   var hWidth = getHexWidth();
+				   var hInWidth = getHexInWidth(hWidth);
+				   var screenIsWide = screenIsWide(hWidth);
 
-                var doit;
-                var onresize = function(e) {
-                    clearTimeout(doit);
-                    doit = setTimeout(resize, 5);
-                }
+				   var doit;
+				   var onresize = function(e) {
+				   clearTimeout(doit);
+				   doit = setTimeout(resize, 5);
+				   }
 
-                window.addEventListener("resize", onresize);
+				   window.addEventListener("resize", onresize);
 
-                fillCont("home");
-                addParagraphs(hInWidth);
-            </script>
+				   fillCont("home");
+				   addParagraphs(hInWidth);
+				   </script>
 
-        <div class="wrapper">
-            <div class="content">
+    <div class="wrapper">
+      <div class="content">
 
-      <!-- ADD PAGE CONTENT  HERE :D -->
+	<!-- ADD PAGE CONTENT  HERE :D -->
         <div id="blogSection">
           <h2>Blog</h2>
           <ul class="blogList">
@@ -161,16 +161,16 @@
           </div>
         </div>
 
-			</div>
+      </div>
 
 
-		</div>
+    </div>
 
 
-      <!-- Footer included with the include.js-script -->
-      <div class="spacer"></div>
-		<footer id="footer">
-		</footer>
+    <!-- Footer included with the include.js-script -->
+    <div class="spacer"></div>
+    <footer id="footer">
+    </footer>
 
     <script type="text/javascript" src="js/include.js"></script>
     <script type="text/javascript" src="js/slideshow.js"></script>

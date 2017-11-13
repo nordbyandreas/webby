@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
 
     <meta charset="utf-8">
     <title>Tinc. || Work</title>
@@ -11,60 +11,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/hex.js"></script>
 
-</head>
+  </head>
 
-    <body>
-        <div class="wrapper">
+  <body>
+    <div class="wrapper">
 
-            <!-- header included with the include.js-script -->
-            <header id="header"></header>
-        </div>
+      <!-- header included with the include.js-script -->
+      <header id="header"></header>
+    </div>
 
 
-        <h1 class="pageTitle">Our Work</h1>
+    <h1 class="pageTitle">Our Work</h1>
 
-        <div class="content">
+    <div class="content">
 
-            <!-- hexagon grid -->
-            <div id = "container"></div>
+      <!-- hexagon grid -->
+      <div id = "container"></div>
 
-            <script>
-                var numberOfHexagons = 16;
-                var wEM = 12;
-                var maxiHex = 5;
+      <script>
+        var numberOfHexagons = 16;
+        var wEM = 12;
+        var maxiHex = 5;
 
-                var hWidth = getHexWidth();
-                var hInWidth = getHexInWidth(hWidth);
-                var screenIsWide = screenIsWide(hWidth);
+        var hWidth = getHexWidth();
+        var hInWidth = getHexInWidth(hWidth);
+        var screenIsWide = screenIsWide(hWidth);
 
-                var doit;
-                var onresize = function(e) {
-                    clearTimeout(doit);
-                    doit = setTimeout(resize, 5);
-                }
+        var doit;
+        var onresize = function(e) {
+        clearTimeout(doit);
+        doit = setTimeout(resize, 5);
+        }
 
-                window.addEventListener("resize", onresize);
+        window.addEventListener("resize", onresize);
 
-                if (3 <= hInWidth){
-                    fillCont("large");
-                    addParagraphs(hInWidth);
-                }
-                else if (2 <= hInWidth){
-                    fillCont("small");
-                }
-                else{
-                    fillCont("tiny");
-                }
-            </script>
+        if (3 <= hInWidth){
+                 fillCont("large");
+                 addParagraphs(hInWidth);
+                 }
+                 else if (2 <= hInWidth){
+			       fillCont("small");
+			       }
+			       else{
+			       fillCont("tiny");
+			       }
+			       </script>
 
-            <!-- end of hexagon grid -->
-        </div>
+      <!-- end of hexagon grid -->
+    </div>
 
-      <!-- Footer included with the include.js-script -->
-      <div class="spacer"></div>
-		<footer id="footer">
-		</footer>
-		<script type="text/javascript" src="js/include.js"></script>
+    <!-- Footer included with the include.js-script -->
+    <div class="spacer"></div>
+    <footer id="footer">
+    </footer>
+    <script type="text/javascript" src="js/include.js"></script>
   </body>
 
 </html>
